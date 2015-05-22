@@ -6,6 +6,7 @@ using namespace std;
 class Game{
 public:
     void Maps(){
+        char* currentMap;
         char Map[10][10] = {
                 {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
@@ -18,12 +19,29 @@ public:
                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
                 {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"}
         };
+        int playerRow = 2;
+        int playerCol = 2;
 
-        for(row = 0; row < 10; ++row)
-        {
-            for(cal = 0; col < 10; ++col)
+        while(true){
+            if(GetAsyncKeyState(VK_UP))
+                playerRow -= 1;
+            if(GetAsyncKeyState(VK_DOWN))
+                playerRow += 1;
+            if(GetAsyncKeyState(VK_RIGHT))
+                playerCol -= 1;
+            if(GetAsyncKeyState(VK_LEFT))
+                playerCol += 1;
+
+            for(row = 0; row < 10; ++row)
             {
-                cout << Map[row][col];
+                for(cal = 0; col < 10; ++col)
+                {
+                    if(row == playerRow && col == playerCol)
+                        cout << ">";
+                    else
+                        cout << currentMap[row][col];
+
+                }
             }
         }
 
