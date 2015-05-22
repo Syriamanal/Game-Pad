@@ -40,7 +40,14 @@ public:
                         cout << ">";
                     else
                         cout << currentMap[row][col];
-
+                    if(currentMap[playerRow][playerCol] == "#") {
+                        system("CLS");
+                        cout << "Game Over!";
+                    }
+                        else if (currentMap[playerRow][playerCol] == "|"){
+                            int playerRow = 2;
+                            int playerCol = 2;
+                        }
                 }
             }
         }
