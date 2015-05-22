@@ -48,11 +48,12 @@ public:
                             int playerRow = 2;
                             int playerCol = 2;
                         }
+                    }
+                    cout << endl;
                 }
             }
+                system("pause");
         }
-
-    }
 };
 
 int main() {
@@ -60,4 +61,15 @@ int main() {
     GP.Maps();
 
     return 0;
+}
+
+void clearscreen(){
+    HANDLE hOut;
+    COORD Position;
+    
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    
+    Position.X = 0;
+    Position.Y = 0;
+    //add
 }
