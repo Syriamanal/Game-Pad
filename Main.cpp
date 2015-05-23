@@ -71,5 +71,5 @@ void clearscreen(){
     
     Position.X = 0;
     Position.Y = 0;
-    //add
+    SetConsoleCursorPosition(hOut, Position);
 }
