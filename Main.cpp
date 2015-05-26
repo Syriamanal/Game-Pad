@@ -3,6 +3,8 @@
 
 using namespace std;
 
+void clearscreen();
+
 class Game{
 public:
     void Maps(){
